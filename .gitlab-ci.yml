@@ -5,6 +5,7 @@ pages:
     entrypoint: ["/bin/sh", "-c"]
   script:
   - |
+    echo 'Hare Krishna!'
     find . -type f -name "*.md" -print0 | while read -d $'\0' file
     do
       pandoc --output="${file%}.html" "$file"
